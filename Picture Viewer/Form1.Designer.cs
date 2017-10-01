@@ -29,21 +29,22 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.formBox = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnBrowse = new System.Windows.Forms.Button();
-            this.btnReset = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
+            this.btnReset = new System.Windows.Forms.Button();
+            this.btnZoom = new System.Windows.Forms.Button();
+            this.btnAutoSize = new System.Windows.Forms.Button();
+            this.btnStretch = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnZoom = new System.Windows.Forms.Button();
-            this.btnAutoSize = new System.Windows.Forms.Button();
-            this.btnStretch = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.formBox)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
@@ -53,7 +54,7 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.formBox, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.treeView1, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel2, 1, 0);
@@ -67,15 +68,15 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1062, 673);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // pictureBox1
+            // formBox
             // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 51);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(843, 619);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.formBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.formBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.formBox.Location = new System.Drawing.Point(3, 51);
+            this.formBox.Name = "formBox";
+            this.formBox.Size = new System.Drawing.Size(843, 619);
+            this.formBox.TabIndex = 0;
+            this.formBox.TabStop = false;
             // 
             // flowLayoutPanel1
             // 
@@ -100,15 +101,7 @@
             this.btnBrowse.TabIndex = 0;
             this.btnBrowse.Text = "Browse File";
             this.btnBrowse.UseVisualStyleBackColor = true;
-            // 
-            // btnReset
-            // 
-            this.btnReset.Location = new System.Drawing.Point(217, 3);
-            this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(101, 39);
-            this.btnReset.TabIndex = 1;
-            this.btnReset.Text = "Reset Image";
-            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
             // 
             // btnClear
             // 
@@ -118,6 +111,47 @@
             this.btnClear.TabIndex = 2;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
+            // btnReset
+            // 
+            this.btnReset.Location = new System.Drawing.Point(217, 3);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(101, 39);
+            this.btnReset.TabIndex = 1;
+            this.btnReset.Text = "Reset Image";
+            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
+            // btnZoom
+            // 
+            this.btnZoom.Location = new System.Drawing.Point(324, 3);
+            this.btnZoom.Name = "btnZoom";
+            this.btnZoom.Size = new System.Drawing.Size(101, 39);
+            this.btnZoom.TabIndex = 4;
+            this.btnZoom.Text = "Zoom Image";
+            this.btnZoom.UseVisualStyleBackColor = true;
+            this.btnZoom.Click += new System.EventHandler(this.btnZoom_Click);
+            // 
+            // btnAutoSize
+            // 
+            this.btnAutoSize.Location = new System.Drawing.Point(431, 3);
+            this.btnAutoSize.Name = "btnAutoSize";
+            this.btnAutoSize.Size = new System.Drawing.Size(122, 39);
+            this.btnAutoSize.TabIndex = 5;
+            this.btnAutoSize.Text = "Auto Size Image";
+            this.btnAutoSize.UseVisualStyleBackColor = true;
+            this.btnAutoSize.Click += new System.EventHandler(this.btnAutoSize_Click);
+            // 
+            // btnStretch
+            // 
+            this.btnStretch.Location = new System.Drawing.Point(559, 3);
+            this.btnStretch.Name = "btnStretch";
+            this.btnStretch.Size = new System.Drawing.Size(123, 39);
+            this.btnStretch.TabIndex = 6;
+            this.btnStretch.Text = "Stretch Image";
+            this.btnStretch.UseVisualStyleBackColor = true;
+            this.btnStretch.Click += new System.EventHandler(this.btnStretch_Click);
             // 
             // btnClose
             // 
@@ -127,6 +161,7 @@
             this.btnClose.TabIndex = 3;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // treeView1
             // 
@@ -164,32 +199,9 @@
             this.label3.TabIndex = 1;
             this.label3.Text = "0";
             // 
-            // btnZoom
+            // openFileDialog1
             // 
-            this.btnZoom.Location = new System.Drawing.Point(324, 3);
-            this.btnZoom.Name = "btnZoom";
-            this.btnZoom.Size = new System.Drawing.Size(101, 39);
-            this.btnZoom.TabIndex = 4;
-            this.btnZoom.Text = "Zoom Image";
-            this.btnZoom.UseVisualStyleBackColor = true;
-            // 
-            // btnAutoSize
-            // 
-            this.btnAutoSize.Location = new System.Drawing.Point(431, 3);
-            this.btnAutoSize.Name = "btnAutoSize";
-            this.btnAutoSize.Size = new System.Drawing.Size(122, 39);
-            this.btnAutoSize.TabIndex = 5;
-            this.btnAutoSize.Text = "Auto Size Image";
-            this.btnAutoSize.UseVisualStyleBackColor = true;
-            // 
-            // btnStretch
-            // 
-            this.btnStretch.Location = new System.Drawing.Point(559, 3);
-            this.btnStretch.Name = "btnStretch";
-            this.btnStretch.Size = new System.Drawing.Size(123, 39);
-            this.btnStretch.TabIndex = 6;
-            this.btnStretch.Text = "Stretch Image";
-            this.btnStretch.UseVisualStyleBackColor = true;
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // Form1
             // 
@@ -200,7 +212,7 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.tableLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.formBox)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel2.ResumeLayout(false);
             this.flowLayoutPanel2.PerformLayout();
@@ -211,7 +223,7 @@
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox formBox;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Button btnBrowse;
         private System.Windows.Forms.Button btnReset;
@@ -224,6 +236,7 @@
         private System.Windows.Forms.Button btnZoom;
         private System.Windows.Forms.Button btnAutoSize;
         private System.Windows.Forms.Button btnStretch;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
 
