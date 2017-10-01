@@ -16,25 +16,5 @@ namespace Picture_Viewer
         {
             InitializeComponent();
         }
-
-        private void btnBrowse_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnResize_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnReset_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

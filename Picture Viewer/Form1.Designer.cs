@@ -36,7 +36,6 @@
             this.btnReset = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.treeView1 = new System.Windows.Forms.TreeView();
-            this.label2 = new System.Windows.Forms.Label();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -54,12 +53,11 @@
             this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.treeView1, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.label2, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel2, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 3;
+            this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.142857F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 92.85714F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
@@ -70,9 +68,9 @@
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 49);
+            this.pictureBox1.Location = new System.Drawing.Point(3, 51);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(843, 600);
+            this.pictureBox1.Size = new System.Drawing.Size(843, 619);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -85,7 +83,7 @@
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(843, 40);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(843, 42);
             this.flowLayoutPanel1.TabIndex = 1;
             // 
             // btnBrowse
@@ -96,7 +94,6 @@
             this.btnBrowse.TabIndex = 0;
             this.btnBrowse.Text = "Browse File";
             this.btnBrowse.UseVisualStyleBackColor = true;
-            this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
             // 
             // btnResize
             // 
@@ -106,7 +103,6 @@
             this.btnResize.TabIndex = 1;
             this.btnResize.Text = "Resize";
             this.btnResize.UseVisualStyleBackColor = true;
-            this.btnResize.Click += new System.EventHandler(this.btnResize_Click);
             // 
             // btnReset
             // 
@@ -116,7 +112,6 @@
             this.btnReset.TabIndex = 2;
             this.btnReset.Text = "Reset Image";
             this.btnReset.UseVisualStyleBackColor = true;
-            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // btnClose
             // 
@@ -126,24 +121,14 @@
             this.btnClose.TabIndex = 3;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // treeView1
             // 
             this.treeView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.treeView1.Location = new System.Drawing.Point(852, 49);
+            this.treeView1.Location = new System.Drawing.Point(852, 51);
             this.treeView1.Name = "treeView1";
-            this.treeView1.Size = new System.Drawing.Size(207, 600);
+            this.treeView1.Size = new System.Drawing.Size(207, 619);
             this.treeView1.TabIndex = 3;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 652);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 17);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "label2";
             // 
             // flowLayoutPanel2
             // 
@@ -152,7 +137,7 @@
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(852, 3);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(207, 40);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(207, 42);
             this.flowLayoutPanel2.TabIndex = 5;
             // 
             // label1
@@ -182,7 +167,6 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel2.ResumeLayout(false);
@@ -201,7 +185,6 @@
         private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.TreeView treeView1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
