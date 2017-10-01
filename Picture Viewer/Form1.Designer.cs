@@ -77,6 +77,8 @@
             this.formBox.Size = new System.Drawing.Size(843, 619);
             this.formBox.TabIndex = 0;
             this.formBox.TabStop = false;
+            this.formBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.formBox_MouseDown);
+            this.formBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.formBox_MouseUp);
             // 
             // flowLayoutPanel1
             // 
