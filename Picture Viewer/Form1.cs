@@ -22,6 +22,24 @@ namespace Picture_Viewer
         public Form1()
         {
             InitializeComponent();
+
+            //// Layout controls.
+            //Rectangle rect = System.Windows.Forms.Screen.PrimaryScreen.Bounds;
+            //this.MinimumSize = new Size(rect.Width * 2 / 3, rect.Height * (3 / 2));
+            //this.Location = new Point(rect.Width / 6, 0);
+            //comboBox1.Items.AddRange(new object[] {
+            //"Invoice.pdf", "CorporateBrochure.pdf", "TextFormatting.pdf",  "Graphics.pdf", "MultiColumnReports.pdf", "Barcode.pdf"});
+            //comboBox1.SelectedIndex = 0;
+
+            //Control toolbar = this.pdfViewerControl1.Controls["tableLayoutPanel1"].Controls["DocumentToolbar"];
+            //if (toolbar != null)
+            //{
+            //    comboBox1.SelectedValueChanged += new EventHandler(comboBox1_SelectedValueChanged);
+            //    comboBox1_SelectedValueChanged(null, null);
+
+            //    tableLayoutPanel1.Dock = DockStyle.Right;
+            //    toolbar.Controls.Add(tableLayoutPanel1);
+            //}
         }
 
         private void btnBrowse_Click(object sender, EventArgs e)
@@ -31,7 +49,8 @@ namespace Picture_Viewer
                 //pdfReader = new PdfReader(openFileDialog1.FileName                 
                 formBox.Load(openFileDialog1.FileName);
             }
-            
+            //pdfViewerControl1.Load(GetFullTemplatePath(comboBox1.SelectedItem.ToString()));
+            //pdfViewerControl1.Focus();
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -70,6 +89,11 @@ namespace Picture_Viewer
             frmDefination.Show();
             frmDefination.frm1 = this;
             this.Hide();
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
 
         private void btnAutoSize_Click(object sender, EventArgs e)
